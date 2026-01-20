@@ -106,9 +106,10 @@
 
     <form>
       <h3>Personal Information</h3>
-
-      <p>First Name:</p>
-      <input type="text" /><br /><br />
+      <label>
+        <p>First Name:</p>
+        <input type="text" /><br /><br />
+      </label>
 
       <p>Last Name:</p>
       <input type="text" /><br /><br />
@@ -222,6 +223,12 @@
     <p>Address: Tashkent, Uzbekistan</p>
   </body>
   <script>
+    document.addEventListener("keydown", function (e) {
+      if (e.ctrlKey && e.key.toLowerCase() === "u") {
+        e.preventDefault();
+        alert("Ko'chirmang O'zingiz yozing😠");
+      }
+    });
     document.addEventListener("contextmenu", (e) => e.preventDefault());
   </script>
 </html>
